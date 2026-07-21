@@ -2005,10 +2005,10 @@
         // Images uploaded this way are hosted publicly at imgbb.com — anyone
         // with the link can view them (same as any image URL), but they
         // cannot be listed or browsed by others and are not billed.
-        const IMGBB_API_KEY = "a286bc68af035a1454a41c01b7cf581d";
+        const IMGBB_API_KEY = "3d0d0cbfb265c9e2a28d9cae31cecaf5";
 
         function describeStorageError(err) {
-            if (IMGBB_API_KEY === "a286bc68af035a1454a41c01b7cf581d") {
+            if (IMGBB_API_KEY === "3d0d0cbfb265c9e2a28d9cae31cecaf5") {
                 return 'Image hosting is not set up yet. Get a free API key at api.imgbb.com and paste it into IMGBB_API_KEY near the top of the script.';
             }
             if (err && /CORS|Failed to fetch|NetworkError/i.test(err.message || '')) {
@@ -2036,7 +2036,7 @@
         // as the uploaded image's display name) but no longer determines a
         // storage location — ImgBB manages that itself.
         async function uploadImageToStorage(file, path) {
-            if (IMGBB_API_KEY === "YOUR_IMGBB_API_KEY") {
+            if (IMGBB_API_KEY === "3d0d0cbfb265c9e2a28d9cae31cecaf5") {
                 throw new Error('Image hosting is not set up yet. Get a free API key at api.imgbb.com and paste it into IMGBB_API_KEY near the top of the script.');
             }
 
@@ -2054,7 +2054,7 @@
             };
 
             const res = await withTimeout(
-                fetch(`https://api.imgbb.com/1/upload?key=${IMGBB_API_KEY}`, { method: 'POST', body: form }),
+                fetch(`https://api.imgbb.com/1/upload?key=${3d0d0cbfb265c9e2a28d9cae31cecaf5}`, { method: 'POST', body: form }),
                 30000
             );
             const data = await res.json();
